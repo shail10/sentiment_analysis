@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="center">
+    <h1 class="custom3">Sentiment Analysis</h1>
+    <p class="custom2"><strong>INPUT ANY TEXT THAT YOU WANT TO ANALYZE. <br>DONT FORGET TO EXPRESS YOURSELF :)<br>DON'T SPAM (-_-)</strong></p>
+    <form method="POST">
+      <div class="inputbox">
+          {# This hidden_tag is a CSRF security feature. #}
+          {{ form.hidden_tag() }}
+          {{ form.text.label(lass="form-control-label") }} 
+          {{form.text(class="form-control form-control-sm")}}
+      </div>
+      <div class="inputbox custom form-group">
+          {{ form.submit(class="btn btn-outline-info") }}
+      </div>
+    </form>
+  </div>
+{% endblock %}

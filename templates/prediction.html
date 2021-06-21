@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="center">
+    <h1 class="custom3">Sentiment Analysis</h1>
+    <h4 class="custom2">SENTIMENT ANALYSIS ACCORDING TO YOUR INPUT TEXT IS</h4>
+    <p>Text given : <strong>{{session['text']}}</strong></p>
+      <div class="inputbox">
+		    
+			 	
+			
+			<h6>Predicted Class is: <strong>{{pred_class}} ({{sentiment}})</strong></h2>
+			<h6>Predicted probability is: <strong>{{pred_prob}}</strong></h2>
+      </div>
+  	</div>
+{% endblock %}
